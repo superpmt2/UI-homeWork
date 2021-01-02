@@ -1,0 +1,232 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css start */
+
+* {
+    box-sizing: border-box;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.modal-dialog {
+   position: relative;
+   float: left;
+   width: 100%;
+   top: 20vh;
+   padding-left: 32px;
+   padding-right: 32px;
+}
+
+.modal-content {
+    background: white;
+    max-width: 384px;
+    min-width: 256px;
+    height: 211px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.modal-content::before {
+    background: linear-gradient(225deg, #E1F5C5 15.16%, #BEF0F0 87.5%);
+    /* width: 94px;
+    height: 94px; */
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    /* left: -28px;
+    top: -22px; */
+    left: -8%;
+    top: -10%;
+    /* right: 72.92%; */
+    /* bottom: 58.87%; */
+}
+
+.modal-dialog > img {
+    position: absolute;
+    top: -45px;
+    left: calc(50% - 50px);
+    z-index: 1000;
+}
+
+.title {
+    padding: 30px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    display: flex;
+    text-align: center;
+    color: #343434;
+    display: block;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EE9251;
+}
+
+.modal-content-wrap {
+    position: relative;
+}
+
+.modal-content > img {
+    position: absolute;
+    right: 0;
+    top: 55px;
+}
+
+ul {
+    line-height: 0;
+}
+
+li {
+    background: #FDF3D2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #F1B556;
+    font-size: 14px;
+    display: inline-block;
+}
+
+li > p {
+    /* margin-bottom: 5px; */
+}
+
+li > span {
+    color: #A5A5A5;
+    font-size: 12px;
+}
+
+.active {
+    background: linear-gradient(219.05deg, #EA656E 14.65%, #E956C1 95.52%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    color: white;
+    font-size: 14px;
+}
+
+.active >span {
+    color: #EA656E;
+}
+
+.btn-close {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: white solid 1px;
+    display: block;
+    margin: auto;
+}
+
+.btn-close::before {
+    content: "";
+    position: absolute;
+    width:65%;
+    height: 1px;
+    left: 3px;
+    top: 8.5px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.btn-close::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 1px;
+    left: 3px;
+    top: 8.5px;
+    background: white;
+    transform: rotate(-45deg);
+}
+
+.p-lg {
+    padding: 20px;
+}
+
+.m-b-xs {
+    margin-bottom: 5px;
+}
+
+.m-t-s {
+    margin-top: 10px;
+}
+
+.m-t-m {
+    margin-top: 15px;
+}
+
+.m-t-l {
+    margin-top: 20px;
+}
+
+.m-r-s {
+    margin-right: 10px;
+}
