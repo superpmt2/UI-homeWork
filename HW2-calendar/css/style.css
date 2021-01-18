@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css start */
+
+* {
+    box-sizing: border-box;
+    /* font-family: SF Pro Text; */
+}
+
+header {
+    background-color: #5A6DF6;
+    position: sticky;
+}
+
+.footer {
+
+}
+
+.tool-wrap {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: space-between;
+}
+
+.page-header {
+    padding: 29px 0px 11px 20px;
+}
+
+/* .fake-select > select {
+    background: url(/img/icon-arrow-24.svg) no-repeat right center transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+} */
+
+select:focus {
+    outline: none;
+}
+
+.fake-select {
+    position: relative;
+}
+
+.fake-select > select {
+    background: url(/img/icon-arrow-24.svg) no-repeat right center transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    width: 200px;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 8px 16px 12px rgba(131, 145, 248, 0.05), 4px 8px 18px rgba(75, 93, 225, 0.1);
+    border-radius: 16px;
+    padding: 16px;
+    width: 80vw;
+    margin: auto;
+}
+
+.card-title {
+    font-size: 16px;
+    color: #5E5658;
+}
+
+.card-content {
+    font-size: 12px;
+    color: #5E5E5E;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body ul li {
+    margin-right: 8px;
+}
+
+.card-body ul li:last-child {
+    margin-right: auto;
+}
+
+.avator-wrap {
+    display: flex;
+}
+
+.btn-default {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    
+    position: relative;
+    /* width: 85px; */
+    height: 36px;
+    
+    background: #F5F3F7;
+    border-radius: 18px;
+    color: #6C62C0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    
+    position: relative;
+    /* width: 85px; */
+    height: 36px;
+    
+    background: #6C62C0;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.scroll-wrap {
+    overflow-x: auto;
+}
+
+.scroll {
+    padding-bottom: 32px;
+    width: fit-content;
+    background: url(/img/Union.svg) repeat-x transparent;
+}
+
+.row {
+    display: flex;
+    width: fit-content;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.col {
+    margin-left: 16px;
+}
+
+.col:first-child {
+    margin-left: auto;
+}
+
+.navbar-bottom {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.m-b-xs {
+    margin-bottom: 5px;
+}
