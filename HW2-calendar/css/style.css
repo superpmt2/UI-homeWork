@@ -179,6 +179,7 @@ select:focus {
 
 .content {
     overflow: hidden;
+    padding-bottom: 24px;
 }
 
 .scroll-wrap {
@@ -206,9 +207,40 @@ select:focus {
     margin-left: auto;
 }
 
+.navbar-bottom-wrap {
+    padding: 16px 26px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
 .navbar-bottom {
     width: 100%;
     justify-content: space-between;
+}
+
+ul {
+    position: relative;
+}
+
+.navbar-bottom li:first-child::before {
+    content: "";
+    top: 34px;
+    left: 38px;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #6C62C0;
+}
+
+.d-flx {
+    display: flex;
+}
+
+.d-blo {
+    display: block;
 }
 
 .m-b-xs {
