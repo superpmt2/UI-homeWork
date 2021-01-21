@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="js/script.js">
+    <!-- <link rel="stylesheet" href="js/script.js"> -->
     <!-- 切版參考：https://htmlstream.com/front-dashboard/index.html -->
 </head>
 <body>
@@ -18,27 +18,25 @@
                 <img src="/img/icon-search-24.svg" alt="">
             </div>
         </div>
-        <div class="page-header">
-            <div class="fake-select">
-                <select name="select" id="">
-                    <option value="1">January</option>
-                    <option value="2">February</option>
-                    <option value="3">March</option>
-                    <option value="4">April</option>
-                    <option value="5">May</option>
-                    <option value="6">June</option>
-                    <option value="7">july</option>
-                    <option value="8">August</option>
-                    <option value="9">Septemper</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <div class="select-show-text">
-                    <!-- <div class="J-select-slot placeholder">預設值</div> -->
-                </div>
-            </div>
+        <!-- 下拉選單後側箭頭隨著選單內容調整位置 -->
+        <div class="month-select">
+			<h2 id="select-text">October</h2>
+			<select id="month" onchange="myNewFunction(this);">
+				<option>January</option>
+				<option>February</option>
+				<option>March</option>
+				<option>April</option>
+				<option>May</option>
+				<option>June</option>
+				<option>July</option>
+				<option>August</option>
+				<option>Septemper</option>
+				<option>October</option>
+				<option>November</option>
+				<option>December</option>
+			</select>
         </div>
+        <!-- End -->
     </header>
     <!-- Header End -->
     <main>
@@ -59,7 +57,7 @@
                                         <li><img src="/img/image 16.svg" alt=""></li>
                                         <li><img src="/img/image 17.svg" alt=""></li>
                                     </ul>
-                                    <div class="btn-default">Accept</div>
+                                    <div class="btn-active">Done</div>
                                 </div>
                             </div>
                         </div>
@@ -99,20 +97,60 @@
                 </div>
             </div>
             <!-- calendar -->
-            <div class="row">
-                <div class="col d-flx">
+            <div class="card-list-container">
+                <div class="d-flx">
                     <div class="col-title">
                         <span>FRI</span>
                         <p>12</p>
                     </div>
                     <div class="col-body">
                         <div class="card-list-wrap">
-                            <div class="card">
+                            <div class="card m-b-12">
                                 <div class="card-body d-blo">
-                                    <div class="card-title">Breakfast</div>
+                                    <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
                                 </div>
                             </div>
+                            <div class="card m-b-12">
+                                <div class="card-body d-blo">
+                                    <div class="card-title">Breakfast with Julie</div>
+                                    <div class="card-content">9 AM - 10</div>
+                                </div>
+                            </div>
+                            <div class="card m-b-12">
+                                <div class="card-body d-blo">
+                                    <div class="card-title">Breakfast with Julie</div>
+                                    <div class="card-content">9 AM - 10</div>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flx">
+                    <div class="col-title">
+                        <span>SAT</span>
+                        <p>13</p>
+                    </div>
+                    <div class="col-body">
+                        <div class="card-list-wrap">
+                            <div class="card m-b-12">
+                                <div class="card-body d-blo">
+                                    <div class="card-title">Breakfast with Julie</div>
+                                    <div class="card-content">9 AM - 10</div>
+                                </div>
+                            </div>
+                            <div class="card m-b-12">
+                                <div class="card-body d-blo">
+                                    <div class="card-title">Breakfast with Julie</div>
+                                    <div class="card-content">9 AM - 10</div>
+                                </div>
+                            </div>
+                            <div class="card m-b-12">
+                                <div class="card-body d-blo">
+                                    <div class="card-title">Breakfast with Julie</div>
+                                    <div class="card-content">9 AM - 10</div>
+                                </div>
+                            </div>                           
                         </div>
                     </div>
                 </div>
@@ -134,5 +172,15 @@
         </ul>
     </footer>
     <!-- Footer End -->
+    <div class="fab-wrap">
+        <div class="fab"></div>
+    </div>
+    <!-- FAB End -->
+    <script type="text/javascript">
+        function myNewFunction(element) {
+            var text = element.options[element.selectedIndex].text;
+            document.getElementById("select-text").innerHTML = text;
+        }
+    </script>
 </body>
 </html>

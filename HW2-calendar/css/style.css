@@ -57,6 +57,10 @@ table {
 header {
     background-color: #5A6DF6;
     position: sticky;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+
 }
 
 .footer {
@@ -69,40 +73,60 @@ header {
     justify-content: space-between;
 }
 
-.page-header {
-    padding: 29px 0px 11px 20px;
+/* 下拉選單後側箭頭隨著選單內容調整位置 */
+.month-select {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+    padding: 23px 0;
 }
 
-/* .fake-select > select {
-    background: url(/img/icon-arrow-24.svg) no-repeat right center transparent;
-    border: none;
+.month-select #select-text {
     color: white;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 32px;
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-} */
-
-select:focus {
-    outline: none;
-}
-
-.fake-select {
+    margin-left: 16px;
     position: relative;
 }
 
-.fake-select > select {
-    background: url(/img/icon-arrow-24.svg) no-repeat right center transparent;
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 32px;
-    appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    width: 200px;
+.month-select select {
+    opacity: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    width: 100vw;
+    box-shadow: none;
+    -webkit-appearance: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: initial;
 }
+
+.month-select #select-text:after {
+    content: " ";
+    position: absolute;
+    right: -28px;
+    top: 12px;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: 8px;
+    height: 8px;
+}
+/* End */
 
 .card {
     background: #FFFFFF;
@@ -179,17 +203,30 @@ select:focus {
 
 .content {
     overflow: hidden;
-    padding-bottom: 24px;
+    padding-bottom: 74px;
+    /* padding-top: 141px; */
+    /* padding-top: 136px; */
 }
 
 .scroll-wrap {
     overflow-x: auto;
+}
+.scroll-wrap::before {
+    content: "";
+    background-color: #5A6DF6;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    z-index: -1;
 }
 
 .scroll {
     padding-bottom: 32px;
     width: fit-content;
     background: url(/img/Union.svg) repeat-x transparent;
+    background-position-y: 15px;
+    position: relative;
+    overflow: visible;
 }
 
 .row {
@@ -212,6 +249,7 @@ select:focus {
     position: fixed;
     width: 100%;
     bottom: 0;
+    background-color: #F3F4F6;
 }
 
 
@@ -243,6 +281,104 @@ ul {
     display: block;
 }
 
+.card-list-container {
+    padding-left: 12px;
+    padding-right: 16px;
+    color: #5E5658;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.card-list-container .d-flx:first-child  {
+    color: #6C62C0;
+    font-size: 32px;
+    /* line-height: initial; */
+}
+
+.col-body {
+    width: 100%;
+}
+
+.col-body .card {
+    width: 100%;
+}
+
+.col-title {
+    text-align: center;
+}
+
+.col-title span {
+    color: #C8C8C8;
+    font-size: 12px;
+    line-height: initial;
+}
+
+.col-title p {
+     font-weight: bold;
+}
+
+.card-list-wrap .card-title {
+    color: #5E5658;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-list-wrap .card-content {
+    color: #C8C8C8;
+}
+
+.card-list-wrap .card-body {
+    padding: 4px 8px;
+}
+
+.card-list-wrap {
+    margin-left: 9px;
+    /* width: 100%; */
+}
+
+.fab-wrap {
+    background-color: #FCBD2D;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+    bottom: 80px;
+    right: 16px;
+    box-shadow: 0px 4px 8px 0px rgba(252, 189, 0, 0.4);
+}
+
+.fab {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 2px 9px 24px 0px rgba(252, 189, 0, 0.29);
+}
+
+.fab-wrap::before {
+    content: "";
+    top: 36.5px;
+    left: 26.5px;
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.fab-wrap::after {
+    content: "";
+    top: 26.5px;
+    left: 36.5px;
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background-color: #fff;
+}
+
 .m-b-xs {
     margin-bottom: 5px;
+}
+
+.m-b-12 {
+    margin-bottom: 12px;
 }
