@@ -64,9 +64,15 @@ table {
    position: relative;
    float: left;
    width: 100%;
-   top: 20vh;
+   padding-top: 43vw;
    padding-left: 32px;
    padding-right: 32px;
+}
+
+@media (min-width:480px) {
+    .modal-dialog {
+        padding-top: 252px;
+    }
 }
 
 .modal-content {
@@ -87,6 +93,8 @@ table {
     height: 30vw;
     max-width: 137px;
     max-height: 137px;
+    min-width: 94px;
+    min-height: 94px;
     border-radius: 50%;
     content: '';
     position: absolute;
@@ -102,9 +110,37 @@ table {
 
 .modal-dialog > img {
     position: absolute;
-    top: -45px;
     left: calc(50% - 50px);
     z-index: 1000;
+}
+
+@media (max-width:320px) {
+    .modal-dialog > img {
+        position: absolute;
+        padding-left: 110px;
+        left: 0;
+        z-index: 1000;
+    }
+}
+
+@media (max-width:300px) {
+    .modal-dialog > img {
+        position: absolute;
+        width: fit-content;
+        margin: auto;
+        z-index: 1000;
+        /* left: 0px; */
+        padding-left: 0px;
+    }
+}
+
+/* 實務上盡量利用Padding來推擠距離，少用直接定位的方式 */
+.modal-content-wrap {
+    padding-top: 40px;
+}
+
+.daily ul li:last-child {
+    margin: 0;
 }
 
 .title {
@@ -154,7 +190,6 @@ li {
     line-height: 30px;
     color: #F1B556;
     font-size: 14px;
-    /* display: inline-block; */
     float: left;
 }
 
@@ -186,6 +221,12 @@ li > span {
     border: white solid 2px;
     display: block;
     margin: auto;
+}
+
+@media (max-width:320px) {
+    .btn-close {
+        margin-left: 110px;
+    }
 }
 
 .btn-close::before {

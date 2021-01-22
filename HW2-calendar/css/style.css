@@ -273,8 +273,13 @@ ul {
     background-color: #6C62C0;
 }
 
+.navbar-bottom li {
+    display: flex;
+}
+
 .d-flx {
     display: flex;
+    margin-bottom: 24px;
 }
 
 .d-blo {
