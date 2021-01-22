@@ -223,7 +223,7 @@ header {
 .scroll {
     padding-bottom: 32px;
     width: fit-content;
-    background: url(/img/Union.svg) repeat-x transparent;
+    background: url(./img/Union.svg) repeat-x transparent;
     background-position-y: 15px;
     position: relative;
     overflow: visible;
