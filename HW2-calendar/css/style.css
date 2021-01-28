@@ -60,11 +60,11 @@ header {
     width: 100%;
     z-index: 1000;
     top: 0;
-
+    box-shadow: 0 2px 4px 0 rgb(90 109 246 / 60%);
 }
 
 .footer {
-
+    box-shadow: 0 -2px 4px 0 rgb(0 0 0 / 10%);
 }
 
 .tool-wrap {
@@ -250,6 +250,7 @@ header {
     width: 100%;
     bottom: 0;
     background-color: #F3F4F6;
+    box-shadow: 0 -2px 4px 0 rgb(0 0 0 / 10%);
 }
 
 
