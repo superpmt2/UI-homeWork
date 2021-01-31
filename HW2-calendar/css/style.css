@@ -52,8 +52,8 @@ table {
 * {
     box-sizing: border-box;
     /* font-family: SF Pro Text; */
-     font-family: Microsoft JhengHei;
-     line-height: initial;
+    font-family: Microsoft JhengHei;
+    line-height: initial;
 }
 
 header {
@@ -567,6 +567,13 @@ me
     font-weight: bold;
     font-size: 32px;
     color: #5E5658;
+}
+
+.toggle label {
+    overflow-x: hidden;
+    /* 解決點擊toggle時，會有滾動條的問題 */
+    -webkit-tap-highlight-color: transparent;
+    /* 解決去除點擊瞬間有塊黑底的問題 */
 }
 
 .win-switch {
