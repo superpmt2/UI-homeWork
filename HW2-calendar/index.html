@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendar-list</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="js/script.js"> -->
     <!-- 切版參考：https://htmlstream.com/front-dashboard/index.html -->
 </head>
 <body>
     <header>
-        <div class="tool-wrap">
-            <div class="tool-wrap-left">
-                <img src="./img/icon-today-24.svg" alt="">
+        <section class="Calendar-list">
+            <div class="tool-wrap">
+                <div class="tool-wrap-left">
+                    <img src="./img/icon-today-24.svg" alt="">
+                </div>
+                <div class="tool-wrap-right">
+                    <img src="./img/icon-search-24.svg" alt="">
+                </div>
             </div>
-            <div class="tool-wrap-right">
-                <img src="./img/icon-search-24.svg" alt="">
+            <!-- 下拉選單後側箭頭隨著選單內容調整位置 -->
+            <div class="month-select">
+                <h2 id="select-text">October</h2>
+                <select id="month" onchange="myNewFunction(this);">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>Septemper</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
             </div>
-        </div>
-        <!-- 下拉選單後側箭頭隨著選單內容調整位置 -->
-        <div class="month-select">
-			<h2 id="select-text">October</h2>
-			<select id="month" onchange="myNewFunction(this);">
-				<option>January</option>
-				<option>February</option>
-				<option>March</option>
-				<option>April</option>
-				<option>May</option>
-				<option>June</option>
-				<option>July</option>
-				<option>August</option>
-				<option>Septemper</option>
-				<option>October</option>
-				<option>November</option>
-				<option>December</option>
-			</select>
-        </div>
+        </section>
         <!-- End -->
     </header>
     <!-- Header End -->
@@ -105,19 +107,19 @@
                     </div>
                     <div class="col-body">
                         <div class="card-list-wrap">
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
                                 </div>
                             </div>
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
                                 </div>
                             </div>
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
@@ -133,19 +135,19 @@
                     </div>
                     <div class="col-body">
                         <div class="card-list-wrap">
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
                                 </div>
                             </div>
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
                                 </div>
                             </div>
-                            <div class="card m-b-12">
+                            <div class="card m-b-s">
                                 <div class="card-body d-blo">
                                     <div class="card-title">Breakfast with Julie</div>
                                     <div class="card-content">9 AM - 10</div>
@@ -183,5 +185,6 @@
             document.getElementById("select-text").innerHTML = text;
         }
     </script>
+    
 </body>
 </html>
