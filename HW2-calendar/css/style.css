@@ -92,12 +92,38 @@ header {
     padding: 16px 24px;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
+}
+
+.tool-wrap-left, .tool-wrap-right {
+    display: inline-flex;
+}
+
+.tool-wrap-white {
+    background-color: #fff;
+    display: flex;
+    padding: 8px 24px;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background: #F5F5FA;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .tool-wrap p{
     width: 100%;
     display: inline-block;
     line-height: initial;
+    color: #5E5658;
+}
+
+.tool-wrap-white h1 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
     color: #5E5658;
 }
 
@@ -598,7 +624,7 @@ me
     display:inline-block;
     width: 41px;
     height: 20px;
-    float: right;
+    /* float: right; */
     border-radius: 11px;
     margin-left: 8px;
     background: rgba(120, 120, 128, 0.16);
@@ -636,6 +662,56 @@ me
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
     border: 0.5px solid rgba(0, 0, 0, 0);
 }
+
+.calendar-container {
+    margin-top: 40px;
+    margin-left:  32px;
+    margin-right:  32px;
+    /* background-color: #F3F4F6; */
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-flow: column;
+    /* 要讓整塊“data-column”撐滿剩餘空間，首先要在父層使用"flex" & "flex-flow: column" */
+}
+
+.calendar-container .week-head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.week-head li {
+    padding: 8px 0px;
+    font-weight: bold;
+    font-size: 14px;
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.data-column{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* 預設flex是不折行，會全部塞在一排，所以需要wrap，讓他折行 */
+    flex-grow: 1;
+    /* 待父層下完"flex" % "flex-flow"之後，還要在該區塊使用flex-grow:1，告訴程式要自動將空間撐滿 */
+}
+
+.data-column .data-row {
+    display: flex;
+    width: 100%;
+}
+
+.data-row .item {
+    width: calc(100% / 7);
+    text-align: center;
+    border-top: 1px solid #E7E7E7;
+    padding-top: 8px;
+}
+
+.item-disable {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 
 .f-o-lighter {
     opacity: 30%;
