@@ -712,6 +712,29 @@ me
     color: rgba(0, 0, 0, 0.3);
 }
 
+.item-active {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+}
+
+ul li h2 {
+    position: relative;
+    z-index: 10;
+}
+
+.item-active::after {
+    background: linear-gradient(180deg, #4F71F7 0%, #6D45E0 100%);
+    position: absolute;
+    content: "";
+    left: -2.63%;
+    right: -2.63%;
+    top: -2.86%;
+    bottom: -2.86%;
+    z-index: 0;
+    border-radius: 10px;
+}
+
 
 .f-o-lighter {
     opacity: 30%;
