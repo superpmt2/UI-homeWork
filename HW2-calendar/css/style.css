@@ -706,6 +706,7 @@ me
     text-align: center;
     border-top: 1px solid #E7E7E7;
     padding-top: 8px;
+    position: relative;
 }
 
 .item-disable {
@@ -735,9 +736,50 @@ ul li h2 {
     border-radius: 10px;
 }
 
-
 .f-o-lighter {
     opacity: 30%;
+}
+
+.single-activity {
+    padding: 2px 4px;
+    color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.last-day{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.first-day {
+    box-shadow: 0px 4px 6px rgb(0 0 0 / 10%);
+}
+
+.future-day {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.is-second {
+    top: 68px;
+    position: absolute;
+}
+
+.is-3day {
+    z-index: 100;
+    width: 300%;
+}
+
+.is-6day {
+    z-index: 100;
+    width: 600%;
 }
 
 .m-b-xs {
