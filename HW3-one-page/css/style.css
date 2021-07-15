@@ -70,29 +70,35 @@ header {
           align-items: center;
   padding: 17px 24px;
   background-color: #06F3F9;
+  position: fixed;
+  z-index: 10;
 }
 
-.fz-rwd-s {
+.fz-s {
   font-size: 14px;
 }
-.fz-rwd-m {
+.fz-m {
   font-size: 16px;
 }
-.fz-rwd-l {
+.fz-l {
   font-size: 18px;
 }
-@media screen and (max-width: 768px) {
-  .fz-rwd {
-    font-size: 1.2rem;
-  }
+
+.hero {
+  position: relative;
 }
-@media screen and (min-width: 960px) {
-  .fz-rwd {
-    font-size: 1.4rem;
-  }
+.hero figure.pic-1 {
+  width: 100%;
+  height: 610px;
+  background-image: url("../img/hero-image.svg");
+  background-color: #06F3F9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  max-width: 642px;
 }
 
-.is-pri {
+.btn.is-pri {
   padding: 12px 45px;
   background-color: #F5FB6B;
   border-radius: 40px;
