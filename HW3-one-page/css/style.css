@@ -164,6 +164,7 @@ section figure img {
   width: 100%;
 }
 section.hero {
+  height: 610px;
   background-color: #06F3F9;
   font-size: 3.25rem;
   font-weight: bold;
@@ -173,9 +174,10 @@ section.hero {
 }
 section.hero .pic-1 {
   width: 100%;
-  height: 610px;
+  height: inherit;
+  line-height: initial;
   background-image: url("../img/hero-image.svg");
-  background-position: 50% 160px;
+  background-position: 50% 140px;
   background-repeat: no-repeat;
   background-size: 80%;
   max-width: 642px;
@@ -188,6 +190,11 @@ section.hero .pic-1 {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (min-width: 768px) {
+  section.hero .pic-1 {
+    background-position: 50% 180px;
+  }
+}
 section .pic-960 {
   width: 100%;
   max-width: 960px;
@@ -196,11 +203,33 @@ section .pic-960 {
   display: flex;
   margin: auto;
 }
+section .cont-wrap {
+  max-width: 1024px;
+  margin: auto;
+}
 section.cont-1 {
   background-color: white;
   font-size: 1.5rem;
   padding: 90px 24px;
   line-height: 33.6px;
+}
+section.cont-1.pic-2 {
+  width: 100%;
+  height: inherit;
+  line-height: initial;
+  background-image: url("../img/City.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-width: 1024px;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 section.cont-2 {
   font-size: 1.5rem;
@@ -215,6 +244,8 @@ section.cont-3 {
   padding: 90px 24px;
   line-height: 33.6px;
   text-align: center;
+  max-width: 1920px;
+  margin: auto;
 }
 section.cont-3 p:nth-child(2) {
   margin-top: 14px;
@@ -230,6 +261,28 @@ section.cont-4 p:nth-child(2) {
   margin-top: 30px;
   line-height: 22.4px;
 }
+@media screen and (min-width: 768px) {
+  section.col-2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1920px;
+    margin: auto;
+  }
+  section.col-2 section {
+    width: 50%;
+  }
+  section.col-2:nth-of-type(2n+1) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
 
 footer {
   width: 100%;
@@ -244,11 +297,30 @@ footer .footer-wrap {
           justify-content: center;
   margin: auto;
 }
-footer .footer-wrap .download {
+footer .footer-wrap .about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  footer .footer-wrap .about {
+    display: block;
+  }
+}
+footer .footer-wrap .about .download {
   width: 296px;
   margin: auto;
 }
-footer .footer-wrap .link {
+@media screen and (min-width: 768px) {
+  footer .footer-wrap .about .download {
+    margin: unset;
+  }
+}
+footer .footer-wrap .about .link {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -258,16 +330,37 @@ footer .footer-wrap .link {
           align-items: center;
   margin-top: 60px;
 }
-footer .footer-wrap .link span {
+footer .footer-wrap .about .link span {
   display: inline-block;
 }
-footer .footer-wrap .link span:not(:last-child) {
+footer .footer-wrap .about .link span:not(:last-child) {
   margin-bottom: 12px;
 }
-footer .footer-wrap .social {
-  margin-top: 40px;
+@media screen and (min-width: 768px) {
+  footer .footer-wrap .about .link span {
+    margin-right: 24px;
+  }
+  footer .footer-wrap .about .link span:last-child {
+    margin-bottom: 12px;
+  }
 }
-footer .footer-wrap .social figure {
+@media screen and (min-width: 768px) {
+  footer .footer-wrap .about .link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+footer .footer-wrap .about .social {
+  margin-top: 40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer-wrap .about .social figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,33 +368,63 @@ footer .footer-wrap .social figure {
       -ms-flex-pack: center;
           justify-content: center;
 }
-footer .footer-wrap .social img {
+footer .footer-wrap .about .social img {
   display: inline-block;
 }
-footer .footer-wrap .social img:not(:last-child) {
+footer .footer-wrap .about .social img:not(:last-child) {
   margin-right: 24px;
 }
 @media screen and (min-width: 768px) {
-  footer .footer-wrap .social {
+  footer .footer-wrap .about .social {
     margin-top: 0px;
   }
 }
-footer .footer-wrap .social .language {
+@media screen and (max-width: 768px) {
+  footer .footer-wrap .about .social {
+    border-left: none;
+  }
+}
+footer .footer-wrap .about .social .language {
   text-align: center;
   margin-top: 40px;
+  line-height: 27px;
 }
-footer .footer-wrap .social .language span:not(:last-child) {
+footer .footer-wrap .about .social .language span:not(:last-child) {
   margin-right: 16px;
   padding-right: 16px;
   border-right: 1px solid white;
 }
-footer .footer-wrap .social .Logo {
+footer .footer-wrap .about .social .Logo {
   margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-wrap .about .social {
+    padding-left: 29px;
+  }
+  footer .footer-wrap .about .social .Logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: unset;
+    margin-bottom: 12px;
+  }
+  footer .footer-wrap .about .social .media {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  footer .footer-wrap .about .social .language {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 36px;
+  }
 }
 footer .footer-wrap .privacy {
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
   line-height: normal;
+  margin-top: 48px;
 }
 footer .footer-wrap .privacy span:not(:last-child) {
   margin-right: 16px;
