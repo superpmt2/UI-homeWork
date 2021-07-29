@@ -251,6 +251,18 @@ section.cont-3 p:nth-child(2) {
   margin-top: 14px;
   line-height: 22.4px;
 }
+@media screen and (min-width: 768px) {
+  section.cont-3 {
+    font-size: 3.25rem;
+    line-height: initial;
+    padding: 90px 72px;
+  }
+  section.cont-3 p:nth-child(2) {
+    margin-top: 24px;
+    line-height: initial;
+    font-size: 24px;
+  }
+}
 section.cont-4 {
   font-size: 2.25rem;
   padding: 90px 24px;
@@ -261,7 +273,7 @@ section.cont-4 p:nth-child(2) {
   margin-top: 30px;
   line-height: 22.4px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   section.col-2 {
     width: 100%;
     display: -webkit-box;
@@ -315,7 +327,7 @@ footer .footer-wrap .about .download {
   width: 296px;
   margin: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   footer .footer-wrap .about .download {
     margin: unset;
   }
@@ -336,7 +348,7 @@ footer .footer-wrap .about .link span {
 footer .footer-wrap .about .link span:not(:last-child) {
   margin-bottom: 12px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   footer .footer-wrap .about .link span {
     margin-right: 24px;
   }
@@ -344,7 +356,7 @@ footer .footer-wrap .about .link span:not(:last-child) {
     margin-bottom: 12px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   footer .footer-wrap .about .link {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -374,7 +386,7 @@ footer .footer-wrap .about .social img {
 footer .footer-wrap .about .social img:not(:last-child) {
   margin-right: 24px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   footer .footer-wrap .about .social {
     margin-top: 0px;
   }
@@ -397,7 +409,7 @@ footer .footer-wrap .about .social .language span:not(:last-child) {
 footer .footer-wrap .about .social .Logo {
   margin-top: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   footer .footer-wrap .about .social {
     padding-left: 29px;
   }

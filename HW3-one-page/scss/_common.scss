@@ -208,6 +208,18 @@ section {
             margin-top: 14px;
             line-height: 22.4px;
         }
+
+        @media screen and (min-width: 768px) {
+            font-size: 3.25rem;
+            line-height: initial;
+            padding: 90px 72px;
+
+            & p:nth-child(2) {
+                margin-top: 24px;
+                line-height: initial;
+                font-size: 24px;
+            }
+        }
     }
 
     &.cont-4 {
@@ -222,7 +234,7 @@ section {
         }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1920px) {
         &.col-2 {
             width: 100%;
             display: flex;
@@ -264,7 +276,7 @@ footer {
                 width: 296px;
                 margin: auto;
     
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 1920px) {
                     margin: unset;
                 }
             }
@@ -281,7 +293,7 @@ footer {
                         margin-bottom: 12px;
                     }
     
-                    @media screen and (min-width: 768px) {
+                    @media screen and (min-width: 1920px) {
                         margin-right: 24px;
                         &:last-child {
                             margin-bottom: 12px;
@@ -289,7 +301,7 @@ footer {
                     }
                 }
     
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 1920px) {
                     flex-direction: row;
                 }
             }
@@ -312,7 +324,7 @@ footer {
                     }
                 }
     
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 1920px) {
                     margin-top: 0px;
                 }
 
@@ -338,7 +350,7 @@ footer {
                     margin-top: 40px;
                 }
 
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 1920px) {
                     padding-left: 29px;
                     
                     .Logo {
