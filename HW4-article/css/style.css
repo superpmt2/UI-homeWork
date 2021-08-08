@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.d-flex-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.d-flex.j-content-e {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.d-flex.j-content-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.d-flex.a-items-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-s {
+  padding: 4px;
+}
+.p-m {
+  padding: 8px;
+}
+.p-l {
+  padding: 16px;
+}
+.p-xl {
+  padding: 24px;
+}
+.p-2xl {
+  padding: 32px;
+}
+.p-3xl {
+  padding: 48px;
+}
+
+.m-s {
+  margin: 4px;
+}
+.m-m {
+  margin: 8px;
+}
+.m-l {
+  margin: 16px;
+}
+.m-t-s {
+  margin-top: 4px;
+}
+.m-t-m {
+  margin-top: 8px;
+}
+.m-t-l {
+  margin-top: 16px;
+}
+.m-t-xl {
+  margin-top: 24px;
+}
+.m-t-2xl {
+  margin-top: 32px;
+}
+.m-t-3xl {
+  margin-top: 48px;
+}
+
+.u-sidebar_body .u-sidebar_content .topic-container .title h3 {
+  font-family: Source Han Serif TC;
+  font-style: normal;
+  font-weight: bold;
+  position: relative;
+}
+.u-sidebar_body .u-sidebar_content .topic-container .title h3::before {
+  content: "";
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 32px - 16px);
+  border-bottom: 1px solid #000;
+  position: absolute;
+}
+.u-sidebar_body .u-sidebar_content .topic-container ul a {
+  width: 50%;
+  display: inline-block;
+}
+.u-sidebar_body .u-sidebar_content .topic-container ul a li {
+  width: 100%;
+  padding: 24px 0;
+  display: inline-block;
+  text-align: center;
+}
