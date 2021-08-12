@@ -136,6 +136,34 @@ a {
   margin-top: 48px;
 }
 
+.u-sidebar_body .u-sidebar_content .link-cell a {
+  width: 50%;
+}
+.u-sidebar_body .u-sidebar_content .link-cell a:not(:first-child, :nth-child(2)) {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+.u-sidebar_body .u-sidebar_content .link-cell a li {
+  padding: 24px 0;
+  text-align: center;
+}
+.u-sidebar_body .u-sidebar_content .container .switch .def {
+  color: rgba(0, 0, 0, 0.4);
+  padding-right: 18px;
+}
+.u-sidebar_body .u-sidebar_content .container .switch .def:not(:nth-child(2)) {
+  border-right: 1px solid rgba(0, 0, 0, 0.16);
+}
+.u-sidebar_body .u-sidebar_content .container .switch .def:not(:nth-child(1)) {
+  margin-left: 18px;
+}
+.u-sidebar_body .u-sidebar_content .container .switch .active {
+  color: inherit;
+}
+.u-sidebar_body .u-sidebar_content .container input {
+  background: #E9E9E9;
+  padding: 15px 57px;
+  border: inherit;
+}
 .u-sidebar_body .u-sidebar_content .topic-container .title h3 {
   font-family: Source Han Serif TC;
   font-style: normal;
@@ -149,14 +177,4 @@ a {
   width: calc(100% - 32px - 16px);
   border-bottom: 1px solid #000;
   position: absolute;
-}
-.u-sidebar_body .u-sidebar_content .topic-container ul a {
-  width: 50%;
-  display: inline-block;
-}
-.u-sidebar_body .u-sidebar_content .topic-container ul a li {
-  width: 100%;
-  padding: 24px 0;
-  display: inline-block;
-  text-align: center;
 }
