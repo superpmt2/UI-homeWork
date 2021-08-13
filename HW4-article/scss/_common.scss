@@ -2,6 +2,13 @@
     box-sizing: content-box;
 }
 
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600,700);
+
+body {
+    font-size: 14px;
+}
+
 .d-flex {
     display: flex;
 
@@ -24,6 +31,10 @@
         &c {
             align-items: center;
         }
+    }
+
+    &.d-flex-direct {
+        flex-direction: column;
     }
 }
 
@@ -91,6 +102,32 @@
             margin-top: 48px;
         }  
     }
+
+    &r- {
+        &s {
+            margin-right: 4px;
+        }
+    
+        &m {
+            margin-right: 8px;
+        }
+    
+        &l {
+            margin-right: 16px;
+        }   
+
+        &xl {
+            margin-right: 24px;
+        }  
+        
+        &2xl {
+            margin-right: 32px;
+        }  
+
+        &3xl {
+            margin-right: 48px;
+        }  
+    }
 }
 
 .u-sidebar_body {
@@ -134,24 +171,64 @@
                 background: #E9E9E9;
                 padding: 15px 57px;
                 border: inherit;
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+            }
+        }
+
+        & .topic-container-wrap {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (min-width: 480px) {
+                flex-direction: row;
             }
         }
 
         & .topic-container {
+            width: 33%;
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+
             & .title {
                 h3 {
                     font-family: Source Han Serif TC;
                     font-style: normal;
                     font-weight: bold;
                     position: relative;
+                    font-size: 20px;
                     
                     &::before {
                         content: '';
                         bottom: 0;
                         right: 0;
-                        width: calc(100% - 32px - 16px);
+                        width: calc(100% - 40px - 16px);
                         border-bottom: 1px solid #000;
                         position: absolute;
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                & .title {
+                    h3 {
+                        font-family: Source Han Serif TC;
+                        font-style: normal;
+                        font-weight: bold;
+                        position: relative;
+                        font-size: 20px;
+                        
+                        &::before {
+                            content: '';
+                            bottom: 0;
+                            right: 0;
+                            width: calc(100% - 80px - 16px);
+                            border-bottom: 1px solid #000;
+                            position: absolute;
+                        }
                     }
                 }
             }
