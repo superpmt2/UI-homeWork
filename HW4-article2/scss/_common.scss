@@ -2,3 +2,16 @@ body {
     font-size: 0.875rem;
 }
 
+button {
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
