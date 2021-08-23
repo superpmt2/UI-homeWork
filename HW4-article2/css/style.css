@@ -59,6 +59,7 @@ a {
 
 body {
   font-size: 0.875rem;
+  background-color: #f6f6f6;
 }
 
 button {
@@ -77,6 +78,28 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  max-width: 1024px;
+  margin: 0px 46px;
+}
+
+.col-half-list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.col-half-list li {
+  width: 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+.col-half-list li a {
+  display: block;
+  text-align: center;
+  padding: 24px 0;
+}
+.col-half-list li:nth-last-child(2), .col-half-list li:last-child {
+  border-bottom: 0;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -85,18 +108,38 @@ header {
   height: 100vh;
   overflow-y: scroll;
 }
-header .container {
+@media screen and (min-width: 1024px) {
+  header {
+    height: auto;
+    background-color: #f6f6f6;
+  }
+}
+header .desktop-header {
   max-width: 1024px;
   margin: 0px 46px;
 }
-@media screen and (min-height: 1024px) {
-  header .container {
+@media screen and (min-width: 1024px) {
+  header .desktop-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 136px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .desktop-header.container {
     position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .desktop-header.container {
     margin: 0 auto;
   }
 }
-header .container .top-nav {
-  display: -webkit-flex;
+header .desktop-header .top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   top: 0;
   min-height: 82px;
@@ -105,33 +148,39 @@ header .container .top-nav {
   margin: 0 -46px;
   background-color: #f6f6f6;
 }
-@media screen and (min-height: 1024px) {
-  header .container .top-nav {
+@media screen and (min-width: 1024px) {
+  header .desktop-header .top-nav {
     width: auto;
     margin: 0;
+    background-color: transparent;
     top: 40px;
   }
 }
-header .container .top-nav .main-logo {
+header .desktop-header .top-nav .main-logo {
   width: 56px;
   height: 56px;
   display: inline-block;
   margin: 10px 0 0 20px;
 }
-header .container .top-nav .top-main-list {
+@media screen and (min-width: 1024px) {
+  header .desktop-header .top-nav .main-logo {
+    margin: 0 60px 0 0;
+  }
+}
+header .desktop-header .top-nav .top-main-list {
   margin-left: 24px;
   margin-top: 20px;
 }
-header .container .top-nav .top-main-list li {
+header .desktop-header .top-nav .top-main-list li {
   margin-right: 24px;
 }
-header .container .top-nav .nav-left-item {
+header .desktop-header .top-nav .nav-left-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: auto;
 }
-header .container .top-nav .notice-btn {
+header .desktop-header .top-nav .notice-btn {
   width: 36px;
   height: 36px;
   margin-top: 14px;
@@ -145,7 +194,7 @@ header .container .top-nav .notice-btn {
       -ms-flex-align: center;
           align-items: center;
 }
-header .container .top-nav .toggle-menu {
+header .desktop-header .top-nav .toggle-menu {
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -158,7 +207,7 @@ header .container .top-nav .toggle-menu {
   border: 0;
   background-color: transparent;
 }
-header .container .top-nav .toggle-menu i {
+header .desktop-header .top-nav .toggle-menu i {
   position: absolute;
   display: block;
   width: 20px;
@@ -169,30 +218,30 @@ header .container .top-nav .toggle-menu i {
   transition: all 0.3s;
   border-radius: 20px;
 }
-header .container .top-nav .toggle-menu i:first-child {
+header .desktop-header .top-nav .toggle-menu i:first-child {
   top: 18px;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-header .container .top-nav .toggle-menu i:nth-child(2) {
+header .desktop-header .top-nav .toggle-menu i:nth-child(2) {
   background: transparent;
 }
-header .container .top-nav .toggle-menu i:nth-child(3) {
+header .desktop-header .top-nav .toggle-menu i:nth-child(3) {
   top: 18px;
   -webkit-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-header .container .fuction-list {
+header .desktop-header .fuction-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 24px;
 }
-header .container .fuction-list li:first-child {
+header .desktop-header .fuction-list li:first-child {
   position: relative;
   padding-right: 18px;
 }
-header .container .fuction-list li:first-child::after {
+header .desktop-header .fuction-list li:first-child::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -201,29 +250,29 @@ header .container .fuction-list li:first-child::after {
   right: 0;
   top: 5px;
 }
-header .container .fuction-list li:nth-child(2) {
+header .desktop-header .fuction-list li:nth-child(2) {
   margin-right: auto;
   padding-left: 18px;
   padding-right: 18px;
 }
-header .container .fuction-list li:last-child {
+header .desktop-header .fuction-list li:last-child {
   width: 24px;
 }
-header .container .fuction-list li:last-child a {
+header .desktop-header .fuction-list li:last-child a {
   height: 24px;
 }
-header .container .fuction-list li a {
+header .desktop-header .fuction-list li a {
   display: block;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.4);
 }
-header .container .fuction-list .is-active {
+header .desktop-header .fuction-list .is-active {
   color: #222 !important;
 }
-header .container .fixed-top-margin {
+header .desktop-header .fixed-top-margin {
   margin-top: 82px;
 }
-header .container .form-search input {
+header .desktop-header .form-search input {
   width: calc(100% - 30px);
   display: block;
   margin: 0;
@@ -232,22 +281,78 @@ header .container .form-search input {
   background-color: #e9e9e9;
   border: 0;
 }
-header .container .main-nav {
+header .desktop-header .main-nav {
   margin-bottom: 48px;
 }
-header .container .col-half-list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 1024px) {
+  header .modal-menu {
+    margin-top: 108px;
+  }
 }
-header .container .col-half-list li {
-  width: 50%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+@media screen and (min-width: 1024px) {
+  header .modal-menu .container {
+    position: relative;
+  }
 }
-header .container .col-half-list li a {
+@media screen and (min-width: 768px) {
+  header .modal-menu .container {
+    margin: 0 auto;
+  }
+}
+header .modal-menu .container .columns {
+  margin: 0 -20px;
+}
+@media screen and (min-width: 1024px) {
+  header .modal-menu .container .columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+header .modal-menu .container .columns .topic-area {
+  margin-bottom: 48px;
+}
+header .modal-menu .container .columns .topic-area .is-title {
+  font-family: serif;
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+header .modal-menu .container .columns .topic-area .is-title::after {
+  content: "";
+  height: 1px;
+  margin-left: 16px;
+  margin-top: auto;
+  background-color: #000;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header .modal-menu .container .columns .topic-area .btn-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 8px;
+}
+header .modal-menu .container .columns .topic-area .btn-action img {
+  margin-left: 8px;
+}
+header .modal-menu .container .columns .col {
   display: block;
-  text-align: center;
-  padding: 24px 0;
-}
-header .container .col-half-list li:nth-last-child(2), header .container .col-half-list li:last-child {
-  border-bottom: 0;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding: 20px;
 }

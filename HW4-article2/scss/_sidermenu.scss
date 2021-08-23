@@ -6,17 +6,32 @@ header {
     height: 100vh;
     overflow-y: scroll;
 
-    .container {
+    @media screen and (min-width: 1024px) {
+        height: auto;;
+        background-color: #f6f6f6;
+    }
+
+    .desktop-header {
         max-width: 1024px;
         margin: 0px 46px;
         
-        @media screen and (min-height: 1024px) {
-            position: relative;
-            margin: 0 auto;
+        @media screen and (min-width: 1024px) {
+            display: flex;;
+            min-height: 136px;
         }
 
-        & .top-nav {
-            display: -webkit-flex;
+        &.container {
+            @media screen and (min-width: 1024px) {
+                position: relative;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin: 0 auto;
+            }
+        }
+
+        .top-nav {
+            display: flex;
             position: fixed;
             top: 0;
             min-height: 82px;
@@ -25,21 +40,25 @@ header {
             margin: 0 -46px;
             background-color: #f6f6f6;
 
-            @media screen and (min-height: 1024px) {
+            @media screen and (min-width: 1024px) {
                 width: auto;
                 margin: 0;
-                // background-color: transparent;
+                background-color: transparent;
                 top: 40px;
             }
 
-            & .main-logo {
+            .main-logo {
                 width: 56px;
                 height: 56px;
                 display: inline-block;
                 margin: 10px 0 0 20px;
+
+                @media screen and (min-width: 1024px) {
+                    margin: 0 60px 0 0;
+                }
             }
 
-            & .top-main-list {
+            .top-main-list {
                 margin-left: 24px;
                 margin-top: 20px;
 
@@ -48,12 +67,12 @@ header {
                 }
             }
 
-            & .nav-left-item {
+            .nav-left-item {
                 display: flex;
                 margin-right: auto;
             }
 
-            & .notice-btn {
+            .notice-btn {
                 width: 36px;
                 height: 36px;
                 margin-top: 14px;
@@ -62,7 +81,7 @@ header {
                 align-items: center;
             }
 
-            & .toggle-menu {
+            .toggle-menu {
                 width: 36px;
                 height: 36px;
                 display: inline-block;
@@ -75,7 +94,7 @@ header {
                 border: 0;
                 background-color: transparent;
 
-                & i {
+                i {
                     position: absolute;
                     display: block;
                     width: 20px;
@@ -102,11 +121,11 @@ header {
             }
         }
 
-        & .fuction-list {
+        .fuction-list {
             align-items: center;
             margin-bottom: 24px;
             
-            & li {
+            li {
                 &:first-child {
                     position: relative;
                     padding-right: 18px;
@@ -143,17 +162,17 @@ header {
                 }
             }
 
-            & .is-active {
+            .is-active {
                 color: #222 !important;
             }
         }
 
-        & .fixed-top-margin {
+        .fixed-top-margin {
             margin-top: 82px;
         }
         
-        & .form-search {
-            & input {
+        .form-search {
+            input {
                 width: calc(100% - 30px);
                 display: block;
                 margin: 0;
@@ -164,25 +183,69 @@ header {
             }
         }
 
-        & .main-nav {
+        .main-nav {
             margin-bottom: 48px;
         }
+    }
 
-        & .col-half-list {
-            flex-wrap: wrap;
+    .modal-menu {
+        @media screen and (min-width: 1024px) {
+            margin-top: 108px;
+        }
 
-            & li {
-                width: 50%;
-                border-bottom: 1px solid rgb(0, 0, 0, 0.16);
+        .container {
+            @media screen and (min-width: 1024px) {
+                position: relative;;
+            }
 
-                & a {
-                    display: block;
-                    text-align: center;
-                    padding: 24px 0;
+            @media screen and (min-width: 768px) {
+                margin: 0 auto;
+            }
+
+            .columns {
+                margin: 0 -20px;
+
+                @media screen and (min-width: 1024px) {
+                    display: flex;
                 }
 
-                &:nth-last-child(2), &:last-child {
-                    border-bottom: 0;
+                .topic-area {
+                    margin-bottom: 48px;
+
+                    .is-title {
+                        font-family: serif;
+                        font-size: 1.25rem;
+                        display: flex;
+                        margin: 0;
+
+                        &::after {
+                            content: "";
+                            height: 1px;
+                            margin-left: 16px;
+                            margin-top: auto;
+                            background-color: #000;
+                            flex-grow: 1; // 利用"flex-grow"的特性「分配剩餘的空間(介於0-1，以小數點來代表佔畫面的比例)」，來讓線條填滿剩餘區塊，這樣就不需要煩惱計算的公式
+                        }
+                    }
+
+                    .btn-action {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        padding: 0 8px;
+
+                        img {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                .col {
+                    display: block;
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    padding: 20px;
                 }
             }
         }
