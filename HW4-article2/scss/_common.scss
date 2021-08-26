@@ -1,6 +1,6 @@
 body {
     font-size: 0.875rem;
-    background-color: #f6f6f6;
+    background-color: #999;
 }
 
 button {
@@ -39,4 +39,8 @@ ul {
             border-bottom: 0;
         }
     }
+}
+
+a:hover {
+    color: #45B7C4!important;
 }

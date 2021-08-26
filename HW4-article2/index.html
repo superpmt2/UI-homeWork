@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
+    <header class="main-header is-open">
         <div class="desktop-header container">
             <div class="top-nav">
                 <a href="" class="main-logo">
@@ -22,7 +22,7 @@
                 <a href="#" class="notice-btn">
                     <img src="./img/icon/notice.svg" alt="notice">
                 </a>
-                <button class="toggle-menu is-active">
+                <button class="toggle-menu is-active" id="modal-toggle-btn">
                     <i></i><i></i><i></i>
                 </button>
             </div>
@@ -96,5 +96,13 @@
             </div>
         </div>
     </header>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $("#modal-toggle-btn").click(function (e) {
+            e.preventDefault();
+            $(".main-header").toggleClass("is-open");
+            $(this).toggleClass("is-active");
+        });
+    </script>
 </body>
 </html>
