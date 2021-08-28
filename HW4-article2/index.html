@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="main-header is-open">
+    <header class="main-header">
         <div class="desktop-header container">
             <div class="top-nav">
                 <a href="" class="main-logo">
@@ -96,6 +96,76 @@
             </div>
         </div>
     </header>
+    <!-- 網頁製作參考網址：https://nowthisnews.com/news/us-presses-on-with-evacuations-despite-fears-of-more-attacks -->
+    <Main>
+        <article>
+            <section>
+                <div class="article-header">
+                    <ul>
+                        <li><span>台灣疫情</span></li>
+                        <li><span>台灣</span></li>
+                        <li><span>深度</span></li>
+                    </ul>
+                    <h1>數據分析：「軟封城」一週間，台灣民眾是否真的比較「自律」？</h1>
+                    <span>大台北地區進入三級警戒狀態後，各種地點的人流都有顯著下降，唯有其中一個目的地，人潮下降幅度相對較小。</span>
+                </div>
+                <div class="ParagraphMainImage">
+                    <picture><img src="https://d32kak7w9u5ewj.cloudfront.net/media/image/2021/05/1e4b852499a643ed930d1a5fe8c47761.jpg" alt=""></picture>
+                    <figcaption>
+                        <div>2021年5月21日台灣台北，疫情期間一個空蕩的購物區。</div>
+                        <div>攝：Ann Wang/Reuters/達志影像</div>
+                    </figcaption>
+                </div>
+                <div class="article-author">
+                    <div class="avatar">
+                        <img src="./img/img.svg" alt="">
+                        <div class="detail">
+                            <!-- 下拉選單後側箭頭後側箭頭隨著選單內容調整位置 -->
+                            <!-- START -->
+                            <div class="name-select">
+                                <h3 id="select-text">陳莉雅等</h3>
+                                <select id="name" onchange="myNewFunction(this);">
+                                    <option value="">特約撰稿人 卞中佩</option>
+                                    <option value="">李家豪</option>
+                                    <option value="">何欣潔</option>
+                                </select>
+                            </div>
+                            <!-- END -->
+                            <div>特約撰稿人 卞中佩、陳莉雅、李家豪 端傳媒記者 何欣潔 特約記者 林庭葦 實習記者 黃傲天 設計師 郭瑾燁 發自台北 2021-05-24</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyword"></div>
+                <div class="main-content"></div>
+                <div class="promo-member"></div>
+                <div class="keyword"></div>
+                <div class="article-author-others"></div>
+                <aside>
+                    <div class="comment"></div>
+                </aside>
+                <aside>
+                    <div class="article-others">
+                        <ul class="hot">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="recommend">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="extend">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+        </article>
+    </Main>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $("#modal-toggle-btn").click(function (e) {
@@ -103,6 +173,12 @@
             $(".main-header").toggleClass("is-open");
             $(this).toggleClass("is-active");
         });
+    </script>
+    <script type="text/javascript">
+        function myNewFunction(element) {
+            var text = element.options[element.selectedIndex].text;
+            document.getElementById("select-text").innerHTML = text;
+        }
     </script>
 </body>
 </html>
