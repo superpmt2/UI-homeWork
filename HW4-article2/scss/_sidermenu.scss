@@ -4,6 +4,7 @@ header {
     width: 100vw;
     height: 82px;
     transition: ease-in-out 0.5s all;
+    z-index: 100;
 
     @media screen and (min-width: 1024px) {
         width: 100%;

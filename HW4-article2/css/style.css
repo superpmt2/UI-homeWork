@@ -265,6 +265,7 @@ main article .promo-member {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-color: white;
+  margin-bottom: 40px;
 }
 main article .promo-member h2 {
   font-size: 1.57rem;
@@ -308,6 +309,31 @@ main article .promo-member button {
 }
 main article .promo-member button span {
   margin-right: 7px;
+}
+main article .sec-keyword {
+  display: block;
+}
+main article .sec-keyword ul {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  margin-bottom: 16px;
+  padding-bottom: 24px;
+}
+main article .note {
+  color: #b8b8b8;
+  line-height: 16.8px;
+  position: relative;
+  margin-bottom: 168px;
+}
+main article .note::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #b8b8b8;
+  top: 128px;
+  left: 50%;
+  border-radius: 4px;
+  margin: 0 auto;
 }
 main article .name-select {
   display: -webkit-box;
@@ -374,6 +400,7 @@ header {
   height: 82px;
   -webkit-transition: ease-in-out 0.5s all;
   transition: ease-in-out 0.5s all;
+  z-index: 100;
 }
 @media screen and (min-width: 1024px) {
   header {

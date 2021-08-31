@@ -211,6 +211,7 @@ main {
             background-repeat: no-repeat;
             background-position: right bottom;
             background-color: white;
+            margin-bottom: 40px;
 
             h2 {
                 font-size: 1.57rem;
@@ -260,6 +261,37 @@ main {
                 
             }
         }
+
+        .sec-keyword {
+            display: block;
+
+            ul {
+                border-bottom: 1px solid rgb(0, 0, 0, 0.16);
+                margin-bottom: 16px;
+                padding-bottom: 24px;
+            }
+        }
+
+        .note {
+            color: #b8b8b8;
+            line-height: 16.8px;
+            position: relative;
+            margin-bottom: 168px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #b8b8b8;
+                top: 128px;
+                left: 50%;
+                border-radius: 4px;
+                margin: 0 auto;
+            }
+        }
+
+
 
         // 下拉選單後側箭頭後側箭頭隨著選單內容調整位置
         // START
