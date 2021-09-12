@@ -206,12 +206,16 @@ main {
 
         .promo-member {
             padding: 20px;
-            background-image: url(../img/icon/img.svg);
-            background-size: 30%;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjI0MiIgdmlld0JveD0iMCAwIDM1MCAyNDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiPgo8cGF0aCBkPSJNMjQ4IDE0NC4zMjFWNTQuNUMyNDggMjQuOTUyNyAyNzEuOTUzIDEgMzAxLjUgMUMzMjEuODMgMSAzMzkuNTEyIDEyLjMxNTcgMzQ4LjU2NSAyOSIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMzQ5IDE1MkwzMjkuOTU1IDE2MC45NjJDMzI5Ljc4IDE2MS4wNDQgMzI5LjY2OCAxNjEuMjIxIDMyOS42NjggMTYxLjQxNFYxODYuMTYzQzMyOS42NjggMTg2LjM3NSAzMjkuNTM1IDE4Ni41NjMgMzI5LjMzNiAxODYuNjM0TDMxMy4wMjEgMTkyLjQ1MUMzMTIuODIyIDE5Mi41MjIgMzEyLjY4OSAxOTIuNzExIDMxMi42ODkgMTkyLjkyMlYyMTUuOTg3QzMxMi42ODkgMjE2LjE4OCAzMTIuNTY5IDIxNi4zNyAzMTIuMzgzIDIxNi40NDhMMjk0LjI0NCAyMjQuMTA3QzI5NC4wNTkgMjI0LjE4NSAyOTMuOTM5IDIyNC4zNjYgMjkzLjkzOSAyMjQuNTY3VjI0MU0xODggMjQxVjIyNC41NTNDMTg4IDIyNC4zNTkgMTg4LjExMiAyMjQuMTgzIDE4OC4yODcgMjI0LjFMMjA2LjQ2NCAyMTUuNTIzQzIwNi42MzkgMjE1LjQ0IDIwNi43NSAyMTUuMjY0IDIwNi43NSAyMTUuMDcxVjE5Mi44OTFDMjA2Ljc1IDE5Mi42OTUgMjA2Ljg2NSAxOTIuNTE3IDIwNy4wNDMgMTkyLjQzNkwyMjMuMzk5IDE4NC45ODRDMjIzLjU3NyAxODQuOTAzIDIyMy42OTEgMTg0LjcyNSAyMjMuNjkxIDE4NC41MjlWMTYxLjQxNEMyMjMuNjkxIDE2MS4yMjEgMjIzLjgwMyAxNjEuMDQ0IDIyMy45NzggMTYwLjk2MkwyNDIuOTIyIDE1Mi4wNDhDMjQyLjk4OSAxNTIuMDE2IDI0My4wNjEgMTUyIDI0My4xMzUgMTUySDMzMi4zNzciIHN0cm9rZT0iIzIyMjIyMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjIzNSIgeTE9IjE4NCIgeDI9IjMxMiIgeTI9IjE4NCIgc3Ryb2tlPSIjMjIyMjIyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8bGluZSB4MT0iMjE3IiB5MT0iMjE1IiB4Mj0iMjk0IiB5Mj0iMjE1IiBzdHJva2U9IiMyMjIyMjIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zMi40NDU1IDI0MEMxNS4zNTg0IDE2OC45NzcgOTAuOTAwOSA5My4wMDkxIDE2Mi44NDcgMTMzLjAxNkMxNzguMjkyIDE0MS42MDQgMTc0Ljk4NyAxNTguMTg5IDE2NC4xOTYgMTYyLjY4NEMxNTMuNDA0IDE2Ny4xNzkgMTQyLjEwNCAxNjEuMTA3IDEzOS45MTQgMTQ0LjI1NEMxMzAuMzMgNzAuNDczNyAyMjUuNjAzIDI0LjAwMjIgMjkxIDczLjU3MjIiIHN0cm9rZT0iIzIyMjIyMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iMzA0IiBjeT0iODUiIHI9IjkiIGZpbGw9IiMyMjIyMjIiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMCI+CjxyZWN0IHdpZHRoPSIzNTAiIGhlaWdodD0iMjQyIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
+            background-size:35%;
             background-repeat: no-repeat;
             background-position: right bottom;
             background-color: white;
             margin-bottom: 40px;
+
+            @media screen and (min-width: 1024px) {
+                background-size: 20%;
+            }
 
             h2 {
                 font-size: 1.57rem;
@@ -291,6 +295,82 @@ main {
             }
         }
 
+        .article-author-others {
+            ul {
+                .row {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    margin-bottom: 40px;
+
+                    @media screen and (max-width: 1024px) {
+                        display: block;
+                    }
+
+                    li {
+                        display: flex;
+                        width: 50%;
+                        padding-right: 20px;
+
+                        @media screen and (max-width: 1024px) {
+                            width: 100%;
+                            margin-bottom: 40px;
+                            padding-right: unset;
+                        }
+
+                        &:nth-child(2n) {
+                            padding-right: unset;
+                        }
+
+                        picture {
+                            display: flex;
+                            margin-right: 16px;
+                        }
+
+                        .right-info {
+                            flex-grow: 1;
+
+                            .title {
+                                display: flex;
+                                align-items: center;
+                                padding-bottom: 8px;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                                margin-bottom: 8px;
+
+                                span {
+                                    margin-right: 8px;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    
+                                    &:first-child {
+                                        font-family: serif;
+                                    }
+                                }
+
+                                button {
+                                    padding: 3px 8px;
+                                    display: flex;
+                                    align-items: center;
+                                    border: 1px solid #45B7C4;
+                                    border-radius: 12px;
+                                    max-height: 24px;
+                                    
+                                    span {
+                                        font-size: 13px;
+                                        margin-right: 0;
+                                        color: #45B7C4;
+                                        font-weight: unset;
+                                    }
+
+                                    img {
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 
         // 下拉選單後側箭頭後側箭頭隨著選單內容調整位置
