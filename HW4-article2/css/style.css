@@ -421,6 +421,85 @@ main article .article-author-others ul .row li .right-info .title button span {
 main article .article-author-others ul .row li .right-info .title button img {
   margin-right: 4px;
 }
+main article .comment {
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+main article .comment .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+main article .comment .title picture {
+  margin-right: 4px;
+}
+main article .comment .title span {
+  font-size: 20px;
+  font-weight: 600;
+}
+main article .comment .title .counter {
+  color: #2BB6C9;
+  font-weight: inherit;
+  margin-left: 4px;
+}
+main article .comment .login {
+  width: 100%;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(/img/slope.svg);
+  background-repeat: no-repeat;
+  max-width: 867px;
+  margin-bottom: 30px;
+}
+main article .comment .login p {
+  position: relative;
+  padding-bottom: 6px;
+  line-height: 16.8px;
+}
+main article .comment .login p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 2px solid #45B7C4;
+  bottom: 0;
+  z-index: 1;
+}
+main article .comment .content-list {
+  width: 100%;
+}
+main article .comment .content-list .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+main article .comment .content-list .item:last-child {
+  border-bottom: none;
+}
+main article .comment .content-list .item .title {
+  margin-bottom: 10px;
+}
+main article .comment .content-list .item span {
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+main article .comment .content-list .item .time {
+  color: #838383;
+}
 main article .name-select {
   display: -webkit-box;
   display: -ms-flexbox;
