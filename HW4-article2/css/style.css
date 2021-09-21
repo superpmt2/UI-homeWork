@@ -210,6 +210,11 @@ main article .article-author .avatar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
   padding-bottom: 32px;
 }
+@media screen and (min-width: 1024px) {
+  main article .article-author .avatar {
+    padding-bottom: 16px;
+  }
+}
 main article .article-author .avatar picture {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +226,9 @@ main article .article-author .avatar picture {
 main article .article-author .avatar picture img {
   max-width: 64px;
   margin-right: 76px;
+}
+main article .article-author .avatar .detail .name {
+  font-size: 12px;
 }
 main article .keyword {
   display: -webkit-box;
@@ -238,7 +246,7 @@ main article .keyword li {
   margin-bottom: 8px;
 }
 main article .main-content {
-  font-size: 0.9rem;
+  font-size: 15px;
   line-height: 30px;
   color: #222;
 }
@@ -266,10 +274,18 @@ main article .promo-member {
   background-position: right bottom;
   background-color: white;
   margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 @media screen and (min-width: 1024px) {
   main article .promo-member {
     background-size: 20%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main article .promo-member {
+    margin-right: unset;
+    margin-left: unset;
   }
 }
 main article .promo-member h2 {
@@ -426,6 +442,7 @@ main article .comment {
   padding: 20px;
   margin-right: 20px;
   margin-left: 20px;
+  margin-bottom: 64px;
 }
 main article .comment .title {
   display: -webkit-box;
@@ -485,9 +502,11 @@ main article .comment .content-list .item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.16);
   padding-top: 15px;
   padding-bottom: 20px;
+  line-height: 20px;
 }
 main article .comment .content-list .item:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 main article .comment .content-list .item .title {
   margin-bottom: 10px;
@@ -499,6 +518,175 @@ main article .comment .content-list .item span {
 }
 main article .comment .content-list .item .time {
   color: #838383;
+}
+main article .comment .content-list .item p {
+  max-width: 280px;
+}
+main article .article-others {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+main article .article-others h3 {
+  font-family: serif;
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+main article .article-others h3::after {
+  content: "";
+  height: 1px;
+  margin-left: 16px;
+  margin-top: auto;
+  background-color: #000;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+main article .article-others ul {
+  margin-bottom: 64px;
+}
+main article .article-others ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  font-family: serif;
+  line-height: 22px;
+}
+main article .article-others ul li:last-child {
+  border-bottom: none;
+}
+main article .article-others ul li span {
+  font-size: 15px;
+  margin-right: 20px;
+}
+main article .article-others ul li .count {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 46px;
+  color: rgba(184, 184, 184, 0.5);
+  margin-right: unset;
+}
+main article .article-others ul li picture {
+  display: inherit;
+}
+main article .tool-1 {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  main article .tool-1 {
+    display: block;
+  }
+}
+main article .tool-1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -5px;
+  margin-bottom: 65px;
+}
+main article .tool-1 ul li {
+  font-size: 16px;
+  line-height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 65px;
+}
+main article .tool-1 ul li img {
+  margin-right: 8px;
+  width: 23px;
+}
+main article .tool-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  padding: 8px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  main article .tool-2 {
+    display: none;
+  }
+}
+main article .tool-2 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main article .tool-2 .btn button {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 12px;
+  background: #CBE9EC;
+  border-radius: 28px;
+  border: none;
+  margin-right: 8px;
+}
+main article .tool-2 .btn button:last-child {
+  margin-right: unset;
+}
+main article .tool-2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main article .tool-2 ul li {
+  margin-right: 18px;
+}
+main article .tool-2 ul li img {
+  width: inherit;
+  margin: 0 auto;
+  display: block;
+}
+main article .tool-2 ul li span {
+  display: block;
+  margin-top: 4px;
+}
+main article .tool-2 ul li:last-child {
+  margin-right: unset;
+}
+@media screen and (min-width: 1024px) {
+  main article .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main article .col-1 {
+    margin-right: 40px;
+    max-width: 907px;
+  }
 }
 main article .name-select {
   display: -webkit-box;
@@ -556,6 +744,50 @@ main article .name-select select {
   left: 0;
   bottom: 0;
   font-size: initial;
+}
+
+footer {
+  background: #151719;
+  color: white;
+  padding: 63px 20px 118px;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 60px 20px 80px;
+  }
+}
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 31px;
+}
+footer .social img {
+  margin-right: 21px;
+}
+footer ul {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  footer ul {
+    text-align: left;
+  }
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+footer p {
+  color: #838383;
+  text-align: center;
+  font-family: serif;
+  line-height: 20px;
 }
 
 header {

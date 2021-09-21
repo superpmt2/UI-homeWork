@@ -151,6 +151,10 @@ main {
                 border-bottom: 1px solid rgb(0, 0, 0, 0.16);
                 padding-bottom: 32px;
 
+                @media screen and (min-width: 1024px) {
+                    padding-bottom: 16px;
+                }
+
                 picture {
                     display: flex;
                     align-items: flex-start;
@@ -158,6 +162,12 @@ main {
                     img {
                         max-width: 64px;
                         margin-right: 76px;
+                    }
+                }
+
+                .detail {
+                    .name {
+                        font-size: 12px;
                     }
                 }
             }
@@ -179,7 +189,7 @@ main {
         }
 
         .main-content {
-            font-size: 0.9rem;
+            font-size: 15px;
             line-height: 30px;
             color: #222;
 
@@ -212,9 +222,16 @@ main {
             background-position: right bottom;
             background-color: white;
             margin-bottom: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
 
             @media screen and (min-width: 1024px) {
                 background-size: 20%;
+            }
+
+            @media screen and (max-width: 1024px) {
+                margin-right: unset;
+                margin-left: unset;
             }
 
             h2 {
@@ -377,6 +394,7 @@ main {
             padding: 20px;
             margin-right: 20px;
             margin-left: 20px;
+            margin-bottom: 64px;
 
             .title {
                 display: flex;
@@ -433,9 +451,11 @@ main {
                     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
                     padding-top: 15px;
                     padding-bottom: 20px;
+                    line-height: 20px;
 
                     &:last-child {
                         border-bottom: none;
+                        padding-bottom: 0;
                     }
 
                     .title {
@@ -450,12 +470,175 @@ main {
 
                     .time {
                         color: #838383;
-                        ;
+                    }
+
+                    p {
+                        max-width: 280px;
                     }
                 }
             }
         }
 
+        .article-others {
+            margin-left: 20px;
+            margin-right: 20px;
+
+            h3 {
+                font-family: serif;
+                font-size: 20px;
+                line-height: 29px;
+                font-weight: bold;
+                display: flex;
+                margin-bottom: 10px;
+
+                &::after {
+                    content: "";
+                    height: 1px;
+                    margin-left: 16px;
+                    margin-top: auto;
+                    background-color: #000;
+                    flex-grow: 1; // 利用"flex-grow"的特性「分配剩餘的空間(介於0-1，以小數點來代表佔畫面的比例)」，來讓線條填滿剩餘區塊，這樣就不需要煩惱計算的公式
+                }
+            }
+
+            ul {
+                margin-bottom: 64px;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+                    font-family: serif;
+                    line-height: 22px;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    span {
+                        font-size: 15px;
+                        margin-right: 20px;
+                    }
+
+                    .count {
+                        font-weight: 500;
+                        font-size: 32px;
+                        line-height: 46px;
+                        color: rgba(184, 184, 184, 0.5);
+                        margin-right: unset;
+                    }
+
+                    picture {
+                        display: inherit;
+                    }
+                }
+            }
+
+        }
+
+        .tool-1 {
+            display: none;
+
+            @media screen and (min-width: 1024px) {
+                display: block;  
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -5px;
+                margin-bottom: 65px;
+
+                li {
+                    font-size: 16px;
+                    line-height: 22px;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 65px;
+
+                    img {
+                        margin-right: 8px;
+                        width: 23px;
+                    }
+                }
+            }
+        }
+
+        .tool-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+            width: 100%;
+            padding: 8px 20px;
+            box-sizing: border-box;
+
+            @media screen and (min-width: 1024px) {
+                display: none;  
+            }
+            
+            .btn {
+                display: flex;
+                
+                button {
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 8px 12px;
+                    background: #CBE9EC;
+                    border-radius: 28px;
+                    border: none;
+                    margin-right: 8px;
+
+                    &:last-child {
+                        margin-right: unset;
+                    }
+                }
+            }
+
+            ul{
+                display: flex;
+                li {
+                    margin-right: 18px;
+
+                    img {
+                        width: inherit;
+                        margin: 0 auto;
+                        display: block;
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 4px;
+                    }
+
+                    &:last-child {
+                        margin-right: unset;
+                    }
+                }
+            }
+        }
+        
+        .col {
+            @media screen and (min-width: 1024px) {
+                display: flex;  
+            }
+
+            &-1 {
+                @media screen and (min-width: 1024px) {
+                    margin-right: 40px;
+                    max-width: 907px;
+                }
+            }
+            
+            // &-2 {
+            //     max-width: 423px;
+            // }
+        }
 
         // 下拉選單後側箭頭後側箭頭隨著選單內容調整位置
         // START
@@ -513,5 +696,48 @@ main {
             }
         }
         // END
+    }
+}
+
+footer {
+    background: #151719;
+    color: white;
+    padding: 63px 20px 118px;
+
+    @media screen and (min-width: 1024px) {
+        padding: 60px 20px 80px;       
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 31px;
+
+        img{
+            margin-right: 21px;
+        }
+    }
+
+    ul {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 1024px) {
+            text-align: left;        
+        }
+        
+        li {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+    }
+
+    p {
+        color: #838383;
+        text-align: center;
+        font-family: serif;
+        line-height: 20px;
     }
 }
